@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Use - CashTrack</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080f1a;
+      --surface: #0f1f35;
+      --surface2: #152742;
+      --teal: #2dd4bf;
+      --teal-dim: rgba(45, 212, 191, 0.12);
+      --teal-border: rgba(45, 212, 191, 0.2);
+      --text: #e2eaf4;
+      --muted: #7a92b0;
+      --subtle: #3a5270;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(45,212,191,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,212,191,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .header { margin-bottom: 48px; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--teal);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #f0f6ff;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .meta { color: var(--muted); font-size: 14px; }
+    .meta span { color: var(--teal); }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--teal-border), transparent);
+      margin: 40px 0;
+    }
+
+    .section { margin-bottom: 36px; }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--teal-border);
+    }
+
+    p { color: #9ab0cc; font-size: 15px; line-height: 1.75; }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    ul li {
+      color: #9ab0cc;
+      font-size: 15px;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-size: 12px;
+    }
+
+    .highlight {
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 16px;
+      color: #9ab0cc;
+      font-size: 14px;
+    }
+
+    .highlight strong {
+      color: var(--teal);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal-border);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--teal); }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: var(--teal);
+    }
+
+    .footer-meta { font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="header">
+      <div class="badge">Legal</div>
+      <h1>Terms of Use</h1>
+      <p class="meta">Effective Date: <span>April 30, 2026</span></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h2>Acceptance</h2>
+      <p>By downloading or using CashTrack, you agree to be bound by these Terms of Use. If you do not agree, please do not use the app.</p>
+    </div>
+
+    <div class="section">
+      <h2>Purpose of the App</h2>
+      <p>CashTrack is a personal budgeting tool designed to help users track expenses, income, and financial habits. It is provided for informational and organizational purposes only and is not intended as a substitute for professional financial advice.</p>
+    </div>
+
+    <div class="section">
+      <h2>No Financial Advice</h2>
+      <p>Nothing within CashTrack constitutes financial, legal, investment, or tax advice. All budgeting tools and suggestions — including the 50/30/20 rule — are provided as general guidance only. You are solely responsible for your financial decisions.</p>
+      <div class="highlight">
+        <strong>Important</strong>
+        Always consult a qualified financial professional before making significant financial decisions.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Analytics</h2>
+      <p>CashTrack uses Google Firebase Analytics to collect anonymized, non-personal usage data to help improve the app. By using CashTrack, you consent to this anonymous data collection. No personally identifiable information is collected. For more details, refer to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2>Data Responsibility</h2>
+      <p>All financial data you enter is stored locally on your device. You are solely responsible for:</p>
+      <ul>
+        <li>Maintaining the accuracy of data you enter</li>
+        <li>Protecting access to your device and app data</li>
+        <li>Creating backups if needed</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>App Availability</h2>
+      <p>CashTrack is provided "as is" without any guarantees of uninterrupted operation, error-free performance, or continued availability. The app may be updated, modified, or discontinued at any time without prior notice.</p>
+    </div>
+
+    <div class="section">
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, the developer of CashTrack shall not be liable for any direct, indirect, incidental, or consequential damages — including financial loss, data loss, or device damage — arising from your use or inability to use the app.</p>
+    </div>
+
+    <div class="section">
+      <h2>Intellectual Property</h2>
+      <p>All content, design, and code within CashTrack is the property of its developer. You may not copy, modify, distribute, or reverse engineer any part of the application without explicit written permission.</p>
+    </div>
+
+    <div class="section">
+      <h2>Changes to These Terms</h2>
+      <p>These Terms of Use may be updated as the app evolves. Continued use of CashTrack following any update constitutes your acceptance of the revised terms.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>For any questions regarding these Terms of Use, please contact us at <a href="mailto:eliworkedonthat@gmail.com">eliworkedonthat@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">CashTrack</div>
+      <div class="footer-meta">© 2026 CashTrack. All rights reserved.</div>
+    </div>
+
+  </div>
+</body>
+</html>

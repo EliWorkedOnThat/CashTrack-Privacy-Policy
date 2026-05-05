@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - CashTrack</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080f1a;
+      --surface: #0f1f35;
+      --surface2: #152742;
+      --teal: #2dd4bf;
+      --teal-dim: rgba(45, 212, 191, 0.12);
+      --teal-border: rgba(45, 212, 191, 0.2);
+      --text: #e2eaf4;
+      --muted: #7a92b0;
+      --subtle: #3a5270;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Background grid */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(45,212,191,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,212,191,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--teal);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #f0f6ff;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta span {
+      color: var(--teal);
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--teal-border), transparent);
+      margin: 40px 0;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--teal-border);
+    }
+
+    p {
+      color: #9ab0cc;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    ul li {
+      color: #9ab0cc;
+      font-size: 15px;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-size: 12px;
+    }
+
+    /* Highlight card */
+    .highlight {
+      background: var(--teal-dim);
+      border: 1px solid var(--teal-border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-top: 16px;
+      color: #9ab0cc;
+      font-size: 14px;
+    }
+
+    .highlight strong {
+      color: var(--teal);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Firebase notice */
+    .firebase-card {
+      background: var(--surface2);
+      border: 1px solid var(--subtle);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-top: 16px;
+    }
+
+    .firebase-card .tag {
+      display: inline-block;
+      background: rgba(255,160,0,0.1);
+      border: 1px solid rgba(255,160,0,0.25);
+      color: #ffa000;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 6px;
+      padding: 2px 10px;
+      margin-bottom: 10px;
+    }
+
+    .firebase-card p {
+      font-size: 14px;
+    }
+
+    /* Contact */
+    a {
+      color: var(--teal);
+      text-decoration: none;
+      border-bottom: 1px solid var(--teal-border);
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-color: var(--teal);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      color: var(--teal);
+    }
+
+    .footer-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="header">
+      <div class="badge">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective Date: <span>April 30, 2026</span></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h2>Overview</h2>
+      <p>CashTrack is a personal budgeting application designed to help users track expenses, income, subscriptions, and financial habits. We are committed to protecting your privacy and being fully transparent about how the app works.</p>
+    </div>
+
+    <div class="section">
+      <h2>Data You Enter</h2>
+      <p>All financial data you enter into CashTrack — including expenses, income, subscriptions, and preferences — is stored exclusively on your device using local storage. This data is never uploaded, transmitted, or shared with any external server or third party.</p>
+      <div class="highlight">
+        <strong>Your data stays on your device</strong>
+        No accounts required. No cloud sync. No data leaves your phone.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Analytics & Crash Reporting</h2>
+      <p>CashTrack uses <strong style="color:#f0f6ff">Google Firebase Analytics</strong> to collect anonymized, aggregated usage data. This helps us understand how the app is used and improve the experience over time.</p>
+      <div class="firebase-card">
+        <div class="tag">Firebase Analytics</div>
+        <p>The following anonymous data may be collected:</p>
+        <ul>
+          <li>App open and session duration events</li>
+          <li>General feature usage patterns</li>
+          <li>Device type, OS version, and country</li>
+          <li>App version and crash reports</li>
+        </ul>
+        <p style="margin-top:12px">This data is anonymized and cannot be used to identify you personally. It is processed by Google in accordance with their <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Internet Usage</h2>
+      <p>The app uses internet access only for the following limited purposes:</p>
+      <ul>
+        <li>Loading Google Fonts for visual design</li>
+        <li>Sending anonymized analytics events via Firebase</li>
+        <li>Standard Android system services required by the device</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Device Sensors</h2>
+      <p>CashTrack optionally uses the device accelerometer and gyroscope to enable motion-based screen switching. This sensor data is processed locally in real time and is never stored or transmitted.</p>
+    </div>
+
+    <div class="section">
+      <h2>Notifications</h2>
+      <p>The app uses local on-device notifications to remind you to log expenses or stay on track with your budget. These notifications are generated entirely on your device and do not involve any external servers.</p>
+    </div>
+
+    <div class="section">
+      <h2>Advertising</h2>
+      <p>CashTrack contains no advertisements and does not use any advertising networks or tracking tools of any kind.</p>
+    </div>
+
+    <div class="section">
+      <h2>Data Deletion</h2>
+      <p>All locally stored app data can be permanently deleted at any time by clearing the app's data in your device settings or by uninstalling the application.</p>
+    </div>
+
+    <div class="section">
+      <h2>Children's Privacy</h2>
+      <p>CashTrack does not knowingly collect personal data from users of any age. No personally identifiable information is collected through the app.</p>
+    </div>
+
+    <div class="section">
+      <h2>Policy Updates</h2>
+      <p>This Privacy Policy may be updated in future versions of CashTrack to reflect changes or improvements to the app. Continued use of the app following any update constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>If you have any questions or concerns about this Privacy Policy, please reach out at <a href="mailto:eliworkedonthat@gmail.com">eliworkedonthat@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">CashTrack</div>
+      <div class="footer-meta">© 2026 CashTrack. All rights reserved.</div>
+    </div>
+
+  </div>
+</body>
+</html>
